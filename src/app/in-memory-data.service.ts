@@ -6,19 +6,20 @@ import { Hero } from './hero';
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
+
   createDb() {
     const heroes = [
-      { id: 12, name: 'Dr. Nice' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr. IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 12, name: 'Доктор айубит', ability: 'Лечит наповал' },
+      { id: 13, name: 'Бомбануло', ability: 'Взрывается от комментов' },
+      { id: 14, name: 'Рукожоп', ability: 'Всё, за что берется, превращается в говно' },
+      { id: 15, name: 'Прилипенко', ability: 'Липнет ко всем окружающим' },
+      { id: 16, name: 'Стёрка', ability: 'Стирает лучшее в людях' },
+      { id: 17, name: 'Динамик', ability: 'Громко орёт по любому поводу' },
+      { id: 18, name: 'Док НеПью', ability: 'Алкоголь не пьёт, а заправляется' },
+      { id: 19, name: 'Зажигалка', ability: 'Героиня тусовок' },
+      { id: 20, name: 'Шептун', ability: 'Портит воздух и настроение' }
     ];
-    return {heroes};
+    return { heroes };
   }
 
   genId(heroes: Hero[]): number {

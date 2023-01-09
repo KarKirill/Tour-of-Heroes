@@ -1,12 +1,14 @@
-<div *ngIf="hero">
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div>id: {{hero.id}}</div>
-    <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div>
-    <div>description: </div>
+<div *ngIf="hero" class="characteristic">
+   <h2>{{hero.name | uppercase}} Описание</h2>
+   <div><span> {{hero.id}}</span></div>
+   <div>
+      <label for="hero-name">Имя Героя: </label>
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+   </div>
+   <div class="area">
+      <label for="name">Способности: </label>
+      <!-- <input id="name" [(ngModel)]="hero.ability" placeholder="name"> -->
+      <textarea id="name" [(ngModel)]="hero.ability" placeholder="name"></textarea>
+   </div>
 </div>
-
-<button type="button" (click)="save()">save</button>
-<button type="button" (click)="goBack()">back</button>
+<button type="button" (click)="goBack()">вернуться</button>
